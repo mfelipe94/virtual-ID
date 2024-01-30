@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\icons8-login-rounded-50.png" />
+    <None Remove="Images\icons8-password-key-50.png" />
+    <None Remove="Images\icons8-person-100 %282%29.png" />
+    <None Remove="Images\icons8-person-100.png" />
+    <None Remove="Images\icons8-security-user-male-100.png" />
+    <None Remove="Images\icons8-user-50 %281%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AForge.Video" Version="2.2.5" />
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.32.1" />
+    <PackageReference Include="QRCoder" Version="1.3.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icons8-login-rounded-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icons8-password-key-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icons8-person-100 (2).png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icons8-person-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icons8-security-user-male-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icons8-user-50 (1).png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

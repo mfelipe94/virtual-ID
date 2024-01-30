@@ -1,0 +1,58 @@
+﻿<Window x:Class="Main_UID_APP.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main_UID_APP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True">
+    <Grid>
+        <StackPanel>
+            <Grid Margin="0,0,2,0" >
+                <Border Background="#1AA7EC" Padding="30" CornerRadius="25 25 25 25" Margin="0,0,3,-53">
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Text="Welcome to Home Screan" Style="{StaticResource TitleText}"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Grid>
+                <Border Background="#ffffff" Padding="30" CornerRadius="0 0 25 25" Margin="0,22,4,-566">
+                    <Grid Margin="0,-16,-14,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="580"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Left Side of the Screan-->
+                        <Border Background="#ffffff" Padding="30" CornerRadius="25 0 0 25">
+                            <StackPanel VerticalAlignment="Top">
+                                <Image x:Name ="av" Source="C:\Users\megha\Downloads\CENSUS MANAGEMENT.png" />
+                                <TextBlock Text="We stand by:"  Style="{StaticResource TText}" Padding="0 15 0 0"/>
+                                <TextBlock Text="Data protection and user privacy"  Style="{StaticResource TText}"/>
+                                <TextBlock Text="Respect intellectual property rights"  Style="{StaticResource TText}"/>
+                                <TextBlock Text="User-friendly experience and accessibility"  Style="{StaticResource TText}"/>
+                                <TextBlock Text="Ensure security and compliance"  Style="{StaticResource TText}"/>
+                            </StackPanel>
+                            
+                        </Border>
+
+                        <Border  Grid.Column="1" Padding="20" Background="#1AA7EC" CornerRadius="0 25 25 0" >
+                            <StackPanel VerticalAlignment="Top">
+                                <TextBlock Text=""  Style="{StaticResource TText}"/>
+                                <TextBlock Text=""  Style="{StaticResource TText}"/>
+                                <TextBlock Text=""  Style="{StaticResource TText}"/>
+                                <TextBlock Text=""  Style="{StaticResource TText}"/>
+                                <TextBlock Text=""  Style="{StaticResource TText}"/>
+
+
+                                <Button Content="Insert Record" Style="{StaticResource IButton1}" Margin="20 20 20 20" Name="Insert_btn" Click="Insert_btn_Click"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Grid>
+
+</Window>

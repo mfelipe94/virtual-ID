@@ -1,0 +1,75 @@
+﻿<Window x:Class="Main_UID_APP.Datainsertpage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main_UID_APP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--Left Side of the Screan-->
+        <Border Background="#1AA7EC" Padding="30" CornerRadius="25 0 0 25">
+            <StackPanel VerticalAlignment="Center">
+                <Image x:Name="image" x:FieldModifier="public" Height="140" VerticalAlignment="Top" Width="159"/>
+                <Image x:Name ="av" Source="\Images\icons8-person-100 (2).png" Height="100" Width="100"/>
+                <TextBlock Text="Insert Data " Style="{StaticResource TitleText}" Padding="0 0 0 20"/>
+                <TextBlock Text="Enter Accurate data from the Authorized Gorvernment Document" Style="{StaticResource NormaleText}"/>
+            </StackPanel>
+        </Border>
+
+
+        <!--Right Side of the Screan-->
+        <Border Grid.Column="1" Padding="20" Background="White" CornerRadius="0 25 25 0" >
+            <StackPanel>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Name" Grid.Row="0" Style="{StaticResource TText}" Padding="10 10 10 10" />
+                    <TextBlock Text="Mobile No" Grid.Row="1" Style="{StaticResource TText}" Padding="10 10 10 10"/>
+                    <TextBlock Text="Gnder" Grid.Row="2" Style="{StaticResource TText}" Padding="10 10 10 10"/>
+                    <TextBlock Text="Date of Birth" Grid.Row="3" Style="{StaticResource TText}" Padding="10 10 10 10"/>
+                    <TextBlock Text="Cast" Grid.Row="4" Style="{StaticResource TText}" Padding="10 10 10 10"/>
+                    <TextBlock Text="Address" Grid.Row="5" Style="{StaticResource TText}" Padding="10 10 10 10"/>
+
+                    <TextBox Name="txtName" Grid.Column="1" Grid.Row="0" Background="#eaeaea" Margin="0,10,0,70" Grid.RowSpan="2"  />
+                    <TextBox Name="txtMob" Grid.Column="1" Grid.Row="1" Background="#eaeaea" Margin="0,10,0,20"/>
+
+                    <RadioButton x:Name="male" Content="M" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Margin="16,0,0,0"/>
+                    <RadioButton x:Name="female" Content="F" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Margin="74,0,0,0"/>
+                    <RadioButton x:Name="other" Content="O" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" Height="38" Width="51" Margin="121,10,0,0"/>
+
+                    <TextBox Name="txtDate" Width="195" Grid.Row="3" Margin="3,19,182,19" Grid.Column="1" Background="#eaeaea"  />
+                    <DatePicker x:Name="dob"  Grid.Column="1" Grid.Row="3" Margin="208,18,143,26" SelectedDateChanged="dob_SelectedDateChanged_1"  />
+                    <ComboBox x:Name="cast"  HorizontalAlignment="Left"  VerticalAlignment="Center" Width="317" Grid.Column="1" Grid.Row="4" Height="58" Margin="0,10,0,10" Background="#D3d3d3">
+                        <ComboBoxItem Content="OBC"/>
+                        <ComboBoxItem Content="ST"/>
+                        <ComboBoxItem Content="SC"/>
+                        <ComboBoxItem Content="OPEN"/>
+                    </ComboBox>
+                    <TextBox x:Name="txtAddress"  Height="186" Grid.Row="5" TextAlignment="Left" Margin="0,2,-1,-2" Grid.Column="1"  Background="#eaeaea"/>
+                </Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Content="Cancel" Style="{StaticResource IButton}" Margin="20 20 20 20" Click="Button_Click_1"  />
+                    <Button Content="Next" Style="{StaticResource IButton}" Margin="20 20 20 20" Click="Button_Click"  />
+                </StackPanel>
+            </StackPanel>
+
+        </Border>
+    </Grid>
+</Window>
