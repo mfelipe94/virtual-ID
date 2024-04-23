@@ -1,4 +1,4 @@
-# Card-Generator
+# Virtual-ID
 <b> This system's main task is to get the data 
 of the citizen, store it in a database, and generate a UID card that 
 contains the data of the user with a QR code.</b>
